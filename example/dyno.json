@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": {
+      "file": "mod.ts"
+    }
+  },
+  "dependencies": {
+    "std": {
+      "version": "2.3.2",
+      "path": "mod.ts",
+      "paths": {
+        "/http": "mod.ts"
+      }
+    },
+    "oak": "latest",
+    "nanoid": {
+      "version": "3.0.0",
+      "paths": {
+        "random": "random.ts"
+      }
+    }
+  }
+}
