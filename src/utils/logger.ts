@@ -1,6 +1,10 @@
 import { wait } from "../../deps.ts";
 
-const logger: wait.Spinner = wait.wait("Loading...").start();
+const logger: wait.Spinner = wait.wait("Loading...");
+
+export function start() {
+  logger.start();
+}
 
 export function succeed(text: string) {
   logger.succeed(text);

@@ -1,14 +1,12 @@
 import { axiod } from "../../deps.ts";
 import { DependencyError } from "../utils/dependencyError.ts";
-import { getDynoFile, saveDynoMapFile } from "../utils/files.ts";
-import { fail, info, spin, succeed, warn } from "../utils/logger.ts";
+import {
+  DynoDependency,
+  getDynoFile,
+  saveDynoMapFile,
+} from "../utils/files.ts";
+import { fail, info, spin, start, succeed, warn } from "../utils/logger.ts";
 import providers from "../utils/providers.ts";
-
-interface DependenciesOptions {
-  version: string;
-  path?: string;
-  paths: Record<string, string>;
-}
 
 interface ModuleDiagnostic {
   moduleExists: boolean;
@@ -78,7 +76,7 @@ function replaceProviderUrl(
 }
 
 async function dependenciesToImportMap(
-  dependencies: Record<string, string | DependenciesOptions>,
+  dependencies: Record<string, string | DynoDependency>,
 ): Promise<Record<string, string>> {
   const importMap: Record<string, string> = {};
 
@@ -89,6 +87,7 @@ async function dependenciesToImportMap(
     const dependency = dependencies[key];
 
     if (typeof dependency === "string") {
+      const pathKey = `${key}/`;
       const version: string = dependency;
 
       const { latestVersion } = await moduleDiagnostic(key, version);
@@ -99,13 +98,13 @@ async function dependenciesToImportMap(
         version === "latest" ? latestVersion : version,
       );
 
-      if (importMap[key]) {
+      if (importMap[pathKey]) {
         throw new Error(
           `There is already a dependency with this name: ${key}.`,
         );
       }
 
-      importMap[key] = path;
+      importMap[pathKey] = path;
     } else if (typeof dependency === "object") {
       const version = dependency?.version;
 
@@ -200,6 +199,7 @@ async function dependenciesToImportMap(
 }
 
 async function map(): Promise<void> {
+  start();
   spin("Starting dependency mapping");
 
   try {

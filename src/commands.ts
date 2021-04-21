@@ -4,6 +4,7 @@ import { CliffyCommandTypes } from "../deps.ts";
 
 import runCommand from "./commands/run.ts";
 import mapCommand from "./commands/map.ts";
+import initCommand from "./commands/init.ts";
 
 export interface CommandOption {
   name: string;
@@ -15,9 +16,13 @@ export interface CommandOption {
 
 export interface CommandInterface {
   name: string;
-  action: () => void | Promise<void>;
+  action: (options: any, argument: any) => void | Promise<void>;
   description: string;
   options?: CommandOption[];
 }
 
-export const commands: CommandInterface[] = [mapCommand, runCommand];
+export const commands: CommandInterface[] = [
+  mapCommand,
+  runCommand,
+  initCommand,
+];
