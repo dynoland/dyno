@@ -1,7 +1,21 @@
 {
   "scripts": {
     "start": {
-      "file": "mod.ts"
+      "file": "mod.ts",
+      "options": [
+        "allow-net",
+        "allow-read"
+      ]
+    },
+    "start-example2": "deno run --allow-net --allow-read=dyno_map.json --seed 1 --reload mod.ts",
+    "start-example3": {
+      "file": "mod.ts",
+      "options": {
+        "allow-net": "0.0.0.0:8000",
+        "allow-read": "dyno.json",
+        "seed": 1,
+        "reload": true
+      }
     }
   },
   "dependencies": {
