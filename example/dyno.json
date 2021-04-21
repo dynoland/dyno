@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "std": {
-      "version": "2.3.2",
+      "version": "0.94.0",
       "path": "mod.ts",
       "paths": {
         "/http": "mod.ts"
@@ -14,7 +14,7 @@
     },
     "oak": "latest",
     "nanoid": {
-      "version": "3.0.0",
+      "version": "v3.0.0",
       "paths": {
         "random": "random.ts"
       }
