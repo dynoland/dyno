@@ -7,4 +7,4 @@ deno install --unstable -A -f -n aleph https://deno.land/x/aleph@v0.3.0-alpha.32
 mkdir dist
 echo "Building website..."
 
-aleph Building
+aleph build
