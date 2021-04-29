@@ -1,0 +1,49 @@
+#docs {
+  font-size: 15px !important;
+  display: flex;
+}
+
+#docs > p {
+  margin-bottom: 0;
+  line-height: calc(1rem + 5px);
+  font-weight: 300;
+}
+
+#docs > aside > nav > h2 {
+  line-height: 1.27;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+#docs > main {
+  display: flex;
+}
+
+#docs > aside {
+  display: flex;
+  align-items: stretch;
+  padding: 15px 30px;
+}
+
+#docs > aside > nav {
+  width: 250px;
+}
+
+#docs > aside > nav h2 {
+  text-transform: uppercase;
+  color: #535fd7;
+}
+
+#docs > aside > nav > ul {
+  list-style-type: none;
+  padding-left: 8px;
+}
+
+#docs > aside > nav > ul > li.active {
+  font-weight: 500;
+}
+
+#docs > .content {
+  padding: 0 30px 50px;
+  width: 100%;
+}

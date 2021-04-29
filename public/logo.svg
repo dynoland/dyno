@@ -1,0 +1,31 @@
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1077.12 367.33">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-2 {
+        stroke: #000;
+        stroke-width: 30px;
+      }
+    </style>
+  </defs>
+  <g id="Elipse_1" data-name="Elipse 1">
+    <circle class="cls-1" cx="121.65" cy="244.75" r="121.65"/>
+    <circle class="cls-2" cx="121.65" cy="244.75" r="106.65"/>
+  </g>
+  <path id="Caminho_1" data-name="Caminho 1" class="cls-2" d="M265.82,227.72V-2" transform="translate(-38.38 2.03)"/>
+  <g id="Elipse_3" data-name="Elipse 3">
+    <circle class="cls-1" cx="653.62" cy="233.89" r="125.5"/>
+    <path class="cls-2" d="M581.5,231.87a110.5,110.5,0,0,1,221,0" transform="translate(-38.38 2.03)"/>
+  </g>
+  <g id="Elipse_4" data-name="Elipse 4">
+    <circle class="cls-1" cx="948.12" cy="237.39" r="129"/>
+    <circle class="cls-2" cx="948.12" cy="237.39" r="114"/>
+  </g>
+  <line id="Linha_3" data-name="Linha 3" class="cls-2" x1="543.2" y1="366.39" x2="543.2" y2="233.84"/>
+  <line id="Linha_4" data-name="Linha 4" class="cls-2" x1="764.2" y1="366.39" x2="764.2" y2="233.84"/>
+  <line id="Linha_3-2" data-name="Linha 3" class="cls-2" x1="357.68" y1="229.24" x2="335.96" y2="260.26"/>
+  <line id="Linha_3-3" data-name="Linha 3" class="cls-2" x1="480.08" y1="126.8" x2="317.69" y2="358.72"/>
+</svg>
